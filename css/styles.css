@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --font-principal: "Poppins", sans-serif;
+    --color-primary: #1E1E1E;
+    --color-secundary: #EF7828;
+}
+
+body {
+    font-family: var(--font-principal);
+    margin: 0; /* Remover margem padrão do body */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed; /* Fixar no topo */
+    height: 100px;
+    background-color: transparent; /* Cor inicial do fundo do header */
+    transition: background-color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+header.scrolled {
+    background-color: var(--color-primary); /* Cor do fundo quando rolado */
+}
+
+header .logo {
+    max-height: 50px; /* Ajuste conforme necessário */
+    transition: filter 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+header.scrolled .logo {
+    filter: invert(1) brightness(2); /* Inverte e ajusta o brilho para alterar a cor do logotipo */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Garantir que o nav ocupe a largura total do header */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Remover margem padrão */
+    padding: 0; /* Remover padding padrão */
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1E1E1E; /* Cor inicial dos links */
+    font-size: 20px;
+    font-weight: 400;
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+nav ul li a:hover {
+    opacity: 0.7; /* Ajuste a opacidade para diminuir a transparência */
+}
+
+header.scrolled nav ul li a {
+    color: #ffffff; /* Cor dos links quando rolado */
+}
+
+#inicio {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: url("../img/background.png") no-repeat center center;
+    background-size: cover;
+    padding-top: 70px; /* Adicionar espaçamento para o header fixo */
+}
+
+h1 {
+    font-size: 45px;
+    color: #1E1E1E; /* Cor do texto, ajuste conforme necessário */
+    font-weight: 400;
+    width: 65%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto; /* Centralizar o conteúdo */
+}
+
+.btn-borda {
+    border: 2px solid var(--color-primary); /* Define a largura e o estilo da borda */
+    color: var(--color-primary); /* Cor do texto do botão */
+    background-color: transparent; /* Torna o fundo do botão transparente */
+    text-decoration: none; /* Remove o sublinhado de links, se for um link */
+    height: 55px;
+    width: 200px;
+    display: flex; /* Usado para centralizar o texto verticalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    border-radius: 5px; /* Opcional: arredonda os cantos da borda */
+    text-align: center; /* Opcional: centraliza o texto */
+}
+
+.buttons {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os botões */
+    margin-top: 50px; /* Espaçamento entre os botões e o texto */
+}
+
+.btn-preenchido {
+    color: var(--color-secundary); /* Cor do texto do botão */
+    background-color: var(--color-primary); /* Torna o fundo do botão transparente */
+    text-decoration: none; /* Remove o sublinhado de links, se for um link */
+    height: 59px;
+    width: 202px;
+    display: flex; /* Usado para centralizar o texto verticalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    border-radius: 5px; /* Opcional: arredonda os cantos da borda */
+    text-align: center; /* Opcional: centraliza o texto */
+}
+
+#sobre {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: var(--color-primary);
+    background-size: cover;
+    padding-top: 70px; /* Adicionar espaçamento para o header fixo */
+}
