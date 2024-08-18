@@ -293,7 +293,7 @@ h2 {
     justify-content: center;
     display: flex;
     margin-top: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     gap: 80px; /* Espaçamento entre os itens do carrossel */
 }
 
